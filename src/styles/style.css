@@ -238,6 +238,12 @@ footer > p {
   color: #fff;
 }
 
+.tables {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
 .header_container {
   position: relative;
   z-index: 233;
