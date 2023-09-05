@@ -45,33 +45,14 @@ span {
 }
 
 header > div:nth-of-type(2) {
-  min-height: auto;
-  min-height: 450px;
-  background-color: rgba(234, 234, 234, 0.5);
-  background-image: url('https://gates-of-olympus.pro/wp-content/uploads/2023/03/gates_of_olympus_BG.webp');
-  background-position: top center;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  position: relative;
-  background-size: cover;
-  padding-top: 140px;
-  padding-bottom: 70px;
-}
-
-header > div:nth-of-type(2) > div:first-of-type {
-  height: 100%;
-  position: absolute;
-  background: linear-gradient(130deg,rgba(38, 50, 56, 1) 0% ,rgba(255, 255, 255, 0) 100%);
-  opacity: calc(50 / 100);
-  width: 100%;
-  top: 0px;
+  padding-top: 40px;
 }
 
 h1 {
   margin-left: auto;
   font-size: 4em;
   font-weight: 800;
-  color: #fff;
+  text-align: center;
   position: relative;
   z-index: 100;
   margin-right: auto;
@@ -224,7 +205,7 @@ h2, h3 {
 }
 
 footer {
-  background-color: rgba(38,50,56, 1);
+  background-color: #FFC421;
   padding: 20px 35px;
 }
 
@@ -233,9 +214,12 @@ footer > p {
   text-align: center;
 }
 
+.list_titles {
+  margin: 0;
+}
+
 .list_titles > li {
   margin: 0;
-  color: #fff;
 }
 
 .tables {
@@ -246,6 +230,7 @@ footer > p {
 
 .header_container {
   position: relative;
+  justify-content: center;
   z-index: 233;
   align-items: center;
   display: flex;
@@ -253,35 +238,167 @@ footer > p {
 }
 
 .list_titles > li > a {
-  color: white;
+  color: black;
   font-weight: 600;
   text-decoration: none;
 }
 
+header > div:first-of-type > div {
+  margin: 0 auto;
+}
+
+header > div:first-of-type {
+  background-color: #FFC421;
+}
+
+.game_container {
+  position: fixed;
+  top: 0;
+  display: none;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .95);
+  z-index: 99999;
+  overflow: hidden;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.button_close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #195cbd;
+  border: 2px solid #fff;
+  transition: all .2s;
+  z-index: 12;
+  cursor: pointer;
+}
+
+.button_close::after {
+  content: '\2716';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  color: inherit;
+}
+
+.game_open {
+  display: block;
+}
+
+.iframe_wrapper {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  min-height: 400px;
+  height: 80%;
+  min-width: 300px;
+  z-index: 1000000;
+}
+
+iframe {
+  width: 100%;
+  height: 80vh;
+  border: 0;
+  overflow: hidden;
+}
+
+.iframe_button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 56px;
+  border-radius: 10px;
+  line-height: 56px;
+  text-align: center;
+  background-color: #1292f0;
+  font-size: 18px;
+  color: #fff;
+  padding: 0 22px;
+  z-index: 22222222;
+  border: none;
+  cursor: pointer;
+  animation: moving 1s ease-in 4s;
+  animation-fill-mode: forwards;
+}
+
+.wrapper {
+  width: 30%;
+}
+
+.game {
+  width: 100%;
+  position: relative;
+  left: 50%;
+  filter: blur(3px);
+  max-height: 400px;
+  -webkit-filter: blur(3px);
+  min-height: 300px;
+  transform: translateX(-50%);
+}
+
+.play_button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: calc(25px + 50%);
+  transform: translate(-50%, -50%);
+}
+
+.play {
+  height: 100px;
+}
+
+.play_text {
+  position: absolute;
+  white-space: nowrap;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  left: 15%;
+  top: 40%;
+}
+
 @media (min-width: 576px) {
-  header > div:first-of-type, h1, .container {
+  header > div:first-of-type > div, h1, .container {
     max-width: 540px;
   }
 }
 
 @media (min-width: 7768px) {
-  header > div:first-of-type, h1, .container {
+  header > div:first-of-type > div, h1, .container {
     max-width: 720px;
   }
 }
 
 @media (min-width: 1024px) {
-  header > div:first-of-type, h1, .container {
+  header > div:first-of-type > div, h1, .container {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  header > div:first-of-type, h1, .container {
-    max-width: 1332px;
+  header > div:first-of-type > div, h1, .container {
+    max-width: 1282px;
   }
 
   h1 {
-    max-width: 1332px;
+    max-width: 1282px;
   }
 }
