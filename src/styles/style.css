@@ -445,6 +445,13 @@ iframe {
   justify-content: space-evenly;
 }
 
+.image_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
 @media (min-width: 76px) {
   header > div:first-of-type > div, h1, .container {
     width: 90%;
