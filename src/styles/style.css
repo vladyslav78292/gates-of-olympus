@@ -48,9 +48,21 @@ header > div:nth-of-type(2) {
   padding-top: 40px;
 }
 
+main > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px ;
+}
+
+main > div:first-of-type > div {
+  max-width: 60%;
+}
+
 h1 {
   margin-left: auto;
-  font-size: 4em;
+  font-size: 3em;
+  color: #fff;
   font-weight: 800;
   text-align: center;
   position: relative;
@@ -129,6 +141,7 @@ h2, h3 {
 
 .select > span {
   font-size: 18px;
+  text-align: start;
   font-weight: 500;
 }
 
@@ -267,6 +280,20 @@ header > div:first-of-type {
   overflow: hidden;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.buttons > a {
+  color: #fff;
+  text-decoration: none;
+  background-color: #603DBF;
+  padding: 10px 20px;
+}
+
 .button_close {
   position: absolute;
   top: 20px;
@@ -337,7 +364,8 @@ iframe {
 }
 
 .wrapper {
-  width: 30%;
+  width: 50%;
+  position: relative;
 }
 
 .game {
@@ -357,12 +385,12 @@ iframe {
   position: absolute;
   cursor: pointer;
   top: 50%;
-  left: calc(25px + 50%);
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .play {
-  height: 100px;
+  height: 130px;
 }
 
 .play_text {
@@ -375,9 +403,9 @@ iframe {
   top: 40%;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 76px) {
   header > div:first-of-type > div, h1, .container {
-    max-width: 540px;
+    width: 90%;
   }
 }
 
@@ -400,5 +428,42 @@ iframe {
 
   h1 {
     max-width: 1282px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header_container {
+    flex-direction: column;
+  }
+
+  .container {
+    padding-top: 40px;
+  }
+
+  .wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 720px) {
+  main > div:first-of-type, .tables {
+    flex-direction: column;
+  }
+
+  main > div:first-of-type > div {
+    max-width: 100%;
+  }
+
+  h2, h3 {
+    font-size: 2em;
+  }
+
+  h1 {
+    line-height: 40px;
+    font-size: 2.5em;
+  }
+
+  .list_titles {
+    padding-left: 20px;
   }
 }
